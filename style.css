@@ -1,0 +1,33 @@
+.line::after{
+  content: '|';
+  position: absolute;
+  background: transparent;
+  animation: line 1s linear infinite;
+  z-index: 999999;
+}
+.alert-hasil{
+  position: absolute;
+  top: 40px;
+  right: -32px;
+}
+.show-truehasil{
+  display: none;
+  position: absolute;
+  top: -15px;
+  left: 32px;
+  min-width: 100px;
+}
+.alert-hasil:hover > .show-truehasil{
+  display: block;
+}
+@keyframes line {
+  0%,45%{
+    opacity: 1;
+  }
+  50%,95%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
